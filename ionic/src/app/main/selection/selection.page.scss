@@ -1,0 +1,12 @@
+.loader {
+  z-index: 999;
+  background: white;
+}
+a {
+  text-decoration: none;
+  .material-icons {
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+  }
+}

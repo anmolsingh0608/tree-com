@@ -1,0 +1,41 @@
+<ion-content>
+  <div class="container">
+    <div class="header d-flex justify-content-between">
+      <h2>Users</h2>
+      <button class="btn btn-primary" routerLink="/admin/users/create">Add User</button>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table-striped w-100">
+        <thead>
+          <th>#</th>
+          <th>Username</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.role}}</td>
+            <td class="p-1">
+              <button
+                class="btn btn-primary"
+                routerLink="/admin/users/create/{{user.id}}"
+              >
+              <span class="material-icons-outlined">
+                edit
+              </span>
+              </button>
+              <button class="btn btn-danger ms-1" (click)="deleteUser(user.id)">
+                <span class="material-icons-outlined">
+                  delete
+                </span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ion-content>

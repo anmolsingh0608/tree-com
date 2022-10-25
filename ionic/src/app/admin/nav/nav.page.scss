@@ -1,0 +1,10 @@
+nav {
+  background-color: var(--dcr-primary-color);
+  a {
+    color: var(--dcr-primary-text-color);
+  }
+  z-index: 9;
+}
+ion-router-outlet {
+  margin-top: 70px;
+}

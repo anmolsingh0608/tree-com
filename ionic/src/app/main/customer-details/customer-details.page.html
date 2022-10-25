@@ -1,0 +1,119 @@
+<ion-content>
+  <div class="container">
+    <h2 class="mt-5">Enter Customer Details</h2>
+    <form class="card pb-5 pt-2 px-5" [formGroup]="customerForm">
+      <div class="form-group mt-3">
+        <label for="name">Name</label>
+        <input
+          formControlName="name"
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Enter name"
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label for="email">Email</label>
+        <input
+          formControlName="email"
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label for="phone">Phone</label>
+        <input
+          formControlName="phone"
+          type="tel"
+          class="form-control"
+          id="phone"
+          placeholder="Enter phone"
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label for="address">Address</label>
+        <input
+          formControlName="address"
+          type="text"
+          class="form-control"
+          id="address"
+          placeholder="Enter address"
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label for="city">City</label>
+        <select formControlName="city" class="form-control" id="city">
+          <option value="">None</option>
+          <option *ngFor="let city of cities" value="{{city.name}}">{{city.name}}</option>
+        </select>
+      </div>
+    </form>
+    <h2 class="mt-5">Enter Order Details</h2>
+    <form [formGroup]="treeFormArray">
+      <div formArrayName="trees">
+        <div *ngFor="let tree of trees.controls; let i=index" [formGroupName]="i">
+          <div class="card pb-5 pt-2 px-5 mb-5">
+            <div class="form-group mt-3">
+              <label for="treeName">Tree name</label>
+              <input
+                formControlName="treeName"
+                type="text"
+                class="form-control"
+                id="treeName"
+                placeholder="Enter tree name"
+                readonly
+              />
+            </div>
+            <div class="form-group mt-3">
+              <label for="treeQty">Tree quantity</label>
+              <input
+                formControlName="quantity"
+                type="number"
+                class="form-control"
+                id="treeQty"
+                placeholder="Enter tree quantity"
+                min="1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- <form class="card pb-5 pt-2 px-5 mb-5" [formGroup]="treeForm">
+      <div class="form-group mt-3">
+        <label for="treeName">Tree name</label>
+        <input
+          formControlName="treeName"
+          type="text"
+          class="form-control"
+          id="treeName"
+          placeholder="Enter tree name"
+          readonly
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label for="treeQty">Tree quantity</label>
+        <input
+          formControlName="quantity"
+          type="number"
+          class="form-control"
+          id="treeQty"
+          placeholder="Enter tree quantity"
+          min="1"
+        />
+      </div>
+    </form> -->
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="container px-5 d-flex align-items-center flex-column">
+    <button class="btn btn-primary mt-3 w-75" (click)="save()">
+      Proceed
+    </button>
+    <button class="btn btn-warning my-3 w-75" (click)="goBack()">
+      Back to tree selection
+    </button>
+  </div>
+</ion-footer>

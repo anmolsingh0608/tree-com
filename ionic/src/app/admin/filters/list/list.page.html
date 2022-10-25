@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="container">
+    <div class="header d-flex justify-content-between">
+      <h2>Filters</h2>
+      <button class="btn btn-primary" routerLink="/admin/filters/create">Add Filter</button>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table-striped w-100">
+        <thead>
+          <th>#</th>
+          <th>Name</th>
+          <!-- <th>Item</th> -->
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let filter of filters; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ filter.name }}</td>
+            <td class="p-1">
+              <button
+                class="btn btn-primary"
+                routerLink="/admin/filters/create/{{filter.id}}"
+              >
+              <span class="material-icons-outlined">
+                edit
+              </span>
+              </button>
+              <button class="btn btn-danger ms-1" (click)="delete(filter.id)">
+                <span class="material-icons-outlined">
+                  delete
+                </span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ion-content>

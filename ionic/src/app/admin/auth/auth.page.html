@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Login</h2>
+  <div>
+    <form [formGroup]="loginForm">
+      <div class="form-group mt-2">
+        <label for="username">Username</label>
+        <input
+          formControlName="username"
+          type="text"
+          class="form-control"
+          id="username"
+          placeholder="doejohn"
+          autocapitalize="none"
+        />
+      </div>
+      <div class="form-group mt-2">
+        <label for="password">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="Password"
+          autocapitalize="none"
+        />
+      </div>
+      <button class="btn btn-primary w-100 mt-2" (click)="login()">
+        Login
+      </button>
+      <button class="btn btn-warning w-100 mt-2" (click)="goBack()">
+        Back to tree selection
+      </button>
+    </form>
+  </div>
+</div>

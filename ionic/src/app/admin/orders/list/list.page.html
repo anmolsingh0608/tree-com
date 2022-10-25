@@ -1,0 +1,95 @@
+<ion-content>
+  <div class="container">
+    <div class="header align-items-center d-flex justify-content-between">
+      <h2>Orders</h2>
+      <input class="form-control w-25" type="text" placeholder="Search" [formControl]="searchFormControl">
+    </div>
+    <button class="btn btn-primary" (click)="export()">Export</button>
+    <button class="btn btn-primary ms-2" (click)="sendToNursery()">Send To Nursery</button>
+    <div class="row mt-4">
+      <div class="col-sm-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Total orders</h5>
+            <p class="card-text">{{orders.length}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Pending orders</h5>
+            <p class="card-text">{{pending}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Sent to nursery</h5>
+            <p class="card-text">{{sentToNursery}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive mt-4">
+      <table cdk-table [dataSource]="dataOnPage$" class="table-striped w-100">
+
+        <ng-container cdkColumnDef="customerName">
+          <th cdk-header-cell *cdkHeaderCellDef (click)="adjustSort('name')">
+            Customer Name
+            <span *ngIf="sortKey$.value === 'name'">{{ sortDirection$.value === 'asc' ? '↥' : '↧' }}</span>
+          </th>
+          <td cdk-cell *cdkCellDef="let row"> {{row?.customer?.name}} </td>
+        </ng-container>
+        <ng-container cdkColumnDef="city">
+          <th cdk-header-cell *cdkHeaderCellDef (click)="adjustSort('city')">
+            City
+            <span *ngIf="sortKey$.value === 'city'">{{ sortDirection$.value === 'asc' ? '↥' : '↧' }}</span>
+          </th>
+          <td cdk-cell *cdkCellDef="let row"> {{row?.customer?.city}} </td>
+        </ng-container>
+        <ng-container cdkColumnDef="treeName" >
+          <th cdk-header-cell *cdkHeaderCellDef (click)="adjustSort('treeName')">
+            Tree Name
+            <span *ngIf="sortKey$.value === 'treeName'">{{ sortDirection$.value === 'asc' ? '↥' : '↧' }}</span>
+          </th>
+          <td cdk-cell *cdkCellDef="let row"> {{row?.tree?.name}} </td>
+        </ng-container>
+        <ng-container cdkColumnDef="quantity">
+          <th cdk-header-cell *cdkHeaderCellDef (click)="adjustSort('quantity')">
+            Quantity
+            <span *ngIf="sortKey$.value === 'quantity'">{{ sortDirection$.value === 'asc' ? '↥' : '↧' }}</span>
+          </th>
+          <td cdk-cell *cdkCellDef="let row"> {{row?.quantity}} </td>
+        </ng-container>
+        <ng-container cdkColumnDef="orderDate">
+          <th cdk-header-cell *cdkHeaderCellDef (click)="adjustSort('created_at')">
+            Order Date
+            <span *ngIf="sortKey$.value === 'created_at'">{{ sortDirection$.value === 'asc' ? '↥' : '↧' }}</span>
+          </th>
+          <td cdk-cell *cdkCellDef="let row"> {{row?.created_at | date:'MM-dd-yyyy'}} </td>
+        </ng-container>
+        <ng-container cdkColumnDef="actions">
+          <th cdk-header-cell *cdkHeaderCellDef>Actions</th>
+          <td cdk-cell *cdkCellDef="let row">
+            <button class="btn btn-primary" routerLink="/admin/orders/create/{{row.id}}">
+              <span class="material-icons-outlined">
+                visibility
+              </span>
+            </button>
+          </td>
+        </ng-container>
+        <tr cdk-header-row *cdkHeaderRowDef="displayedColumns.value"></tr>
+        <tr cdk-row *cdkRowDef="let row; columns: displayedColumns.value;"></tr>
+      </table>
+    </div>
+    <ngb-pagination
+      [collectionSize]="tableDataSource.value.length"
+      [pageSize]="pageSize$.value"
+      [page]="currentPage$.value"
+      (pageChange)="currentPage$.next($event)">
+    </ngb-pagination>
+
+  </div>
+</ion-content>

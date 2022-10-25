@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>DCR Tree - Select Tree</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/app.css" />
+    </head>
+    <body>
+        <main class="trees">
+            <div class="d-flex flex-column nav-bar">
+                <a href="index.html"
+                    ><img src="images/home-icon.svg" alt=""
+                /></a>
+                <a href="selection.html"
+                    ><img src="images/tree-nav-icon.svg" alt=""
+                /></a>
+                <a href="#"><img src="images/edit-nav-icon.svg" alt="" /></a>
+            </div>
+            <div class="d-flex flex-column tree-selection">
+                <h2 class="mb-4 text-center text-uppercase">Tree Selection</h2>
+                <div class="tree-link">
+                    <a href="#" class="tree-selection-cta" data-tree="form">
+                        <span class="icon"
+                            ><img src="images/form-tree-icon.svg" alt=""
+                        /></span>
+                        <span>Form</span>
+                    </a>
+                    <a href="#" class="tree-selection-cta" data-tree="fruit">
+                        <span class="icon"
+                            ><img src="images/fruits-tree-icon.svg" alt=""
+                        /></span>
+                        <span>Fruit</span>
+                    </a>
+                    <a href="#" class="tree-selection-cta" data-tree="tolerate">
+                        <span class="icon"
+                            ><img src="images/tolerates-tree-icon.svg" alt=""
+                        /></span>
+                        <span>Tolerates</span>
+                    </a>
+                    <a href="#" class="tree-selection-cta" data-tree="size">
+                        <span class="icon"
+                            ><img src="images/size-tree-icon.svg" alt=""
+                        /></span>
+                        <span>Size</span>
+                    </a>
+                    <a
+                        href="#"
+                        class="tree-selection-cta"
+                        data-tree="fallColor"
+                    >
+                        <span class="icon"
+                            ><img src="images/fall-color-icon.svg" alt=""
+                        /></span>
+                        <span>Fall Color</span>
+                    </a>
+                    <a href="#" class="tree-selection-cta" data-tree="flower">
+                        <span class="icon"
+                            ><img src="images/flower-tree-icon.svg" alt=""
+                        /></span>
+                        <span>Flower</span>
+                    </a>
+                    <a
+                        href="#"
+                        class="tree-selection-cta"
+                        data-tree="growthRate"
+                    >
+                        <span class="icon"
+                            ><img src="images/growth-rate-tree.svg" alt=""
+                        /></span>
+                        <span>Growth Rate</span>
+                    </a>
+                    <a href="#" class="tree-selection-cta" data-tree="region">
+                        <span class="icon"
+                            ><img src="images/native-region-tree.svg" alt=""
+                        /></span>
+                        <span>Native region</span>
+                    </a>
+                </div>
+                <div class="filter text-center d-none" data-tree="form">
+                    <div class="d-flex flex-column heading-filter">
+                        <span class="cross-filter">&#x2715;</span>
+                        <span
+                            class="icon align-items-center d-flex flex-grow-1 justify-content-center"
+                            ><img
+                                src="images/form-tree-icon.svg"
+                                alt="" /></span
+                        ><span>Form</span>
+                    </div>
+                    <div class="filter-links">
+                        <ul class="flex-column nav">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 5</a></li>
+                            <li><a href="#">Option 6</a></li>
+                            <li><a href="#">Option 7</a></li>
+                            <li><a href="#">Option 8</a></li>
+                            <li><a href="#">Option 9</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter text-center d-none" data-tree="fruit">
+                    <div class="d-flex flex-column heading-filter">
+                        <span class="cross-filter">&#x2715;</span>
+                        <span
+                            class="icon align-items-center d-flex flex-grow-1 justify-content-center"
+                            ><img
+                                src="images/fruits-tree-icon.svg"
+                                alt="" /></span
+                        ><span>Fruits</span>
+                    </div>
+                    <div class="filter-links">
+                        <ul class="flex-column nav">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 5</a></li>
+                            <li><a href="#">Option 6</a></li>
+                            <li><a href="#">Option 7</a></li>
+                            <li><a href="#">Option 8</a></li>
+                            <li><a href="#">Option 9</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter text-center d-none" data-tree="tolerate">
+                    <div class="d-flex flex-column heading-filter">
+                        <span class="cross-filter">&#x2715;</span>
+                        <span
+                            class="icon align-items-center d-flex flex-grow-1 justify-content-center"
+                            ><img
+                                src="images/tolerates-tree-icon.svg"
+                                alt="" /></span
+                        ><span>Tolerates</span>
+                    </div>
+                    <div class="filter-links">
+                        <ul class="flex-column nav">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 5</a></li>
+                            <li><a href="#">Option 6</a></li>
+                            <li><a href="#">Option 7</a></li>
+                            <li><a href="#">Option 8</a></li>
+                            <li><a href="#">Option 9</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter text-center d-none" data-tree="size">
+                    <div class="d-flex flex-column heading-filter">
+                        <span class="cross-filter">&#x2715;</span>
+                        <span
+                            class="icon align-items-center d-flex flex-grow-1 justify-content-center"
+                            ><img
+                                src="images/size-tree-icon.svg"
+                                alt="" /></span
+                        ><span>Size</span>
+                    </div>
+                    <div class="filter-links">
+                        <ul class="flex-column nav">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 5</a></li>
+                            <li><a href="#">Option 6</a></li>
+                            <li><a href="#">Option 7</a></li>
+                            <li><a href="#">Option 8</a></li>
+                            <li><a href="#">Option 9</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter text-center d-none" data-tree="fallColor">
+                    <div class="d-flex flex-column heading-filter">
+                        <span class="cross-filter">&#x2715;</span>
+                        <span
+                            class="icon align-items-center d-flex flex-grow-1 justify-content-center"
+                            ><img
+                                src="images/fall-color-icon.svg"
+                                alt="" /></span
+                        ><span>Fall Color</span>
+                    </div>
+                    <div class="filter-links">
+                        <ul class="flex-column nav">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 5</a></li>
+                            <li><a href="#">Option 6</a></li>
+                            <li><a href="#">Option 7</a></li>
+                            <li><a href="#">Option 8</a></li>
+                            <li><a href="#">Option 9</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter text-center d-none" data-tree="flower">
+                    <div class="d-flex flex-column heading-filter">
+                        <span class="cross-filter">&#x2715;</span>
+                        <span
+                            class="icon align-items-center d-flex flex-grow-1 justify-content-center"
+                            ><img
+                                src="images/flower-tree-icon.svg"
+                                alt="" /></span
+                        ><span>Flower</span>
+                    </div>
+                    <div class="filter-links">
+                        <ul class="flex-column nav">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 5</a></li>
+                            <li><a href="#">Option 6</a></li>
+                            <li><a href="#">Option 7</a></li>
+                            <li><a href="#">Option 8</a></li>
+                            <li><a href="#">Option 9</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter text-center d-none" data-tree="growthRate">
+                    <div class="d-flex flex-column heading-filter">
+                        <span class="cross-filter">&#x2715;</span>
+                        <span
+                            class="icon align-items-center d-flex flex-grow-1 justify-content-center"
+                            ><img
+                                src="images/growth-rate-tree.svg"
+                                alt="" /></span
+                        ><span>Growth Rate</span>
+                    </div>
+                    <div class="filter-links">
+                        <ul class="flex-column nav">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 5</a></li>
+                            <li><a href="#">Option 6</a></li>
+                            <li><a href="#">Option 7</a></li>
+                            <li><a href="#">Option 8</a></li>
+                            <li><a href="#">Option 9</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter text-center d-none" data-tree="region">
+                    <div class="d-flex flex-column heading-filter">
+                        <span class="cross-filter">&#x2715;</span>
+                        <span
+                            class="icon align-items-center d-flex flex-grow-1 justify-content-center"
+                            ><img
+                                src="images/native-region-tree.svg"
+                                alt="" /></span
+                        ><span>Native region</span>
+                    </div>
+                    <div class="filter-links">
+                        <ul class="flex-column nav">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 5</a></li>
+                            <li><a href="#">Option 6</a></li>
+                            <li><a href="#">Option 7</a></li>
+                            <li><a href="#">Option 8</a></li>
+                            <li><a href="#">Option 9</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="cta update-filter">Search</a>
+                <a href="#" class="cta clear-filter">Clear</a>
+            </div>
+            <div class="tree-wraps">
+                <div class="heading pb-4">
+                    <h2 class="mb-0 text-center text-uppercase">
+                        Popular trees
+                    </h2>
+                </div>
+                <div class="row tree-list-container">
+                    <div class="tree-wrap">
+                        <a href="detail.html" class="box">
+                            <div class="img">
+                                <img src="images/t1.jpg" alt="" />
+                            </div>
+                            <span class="name">Tree name here</span>
+                        </a>
+                    </div>
+                    <div class="tree-wrap">
+                        <a href="#" class="box">
+                            <div class="img">
+                                <img src="images/t2.jpg" alt="" />
+                            </div>
+                            <span class="name">Tree name here</span>
+                        </a>
+                    </div>
+                    <div class="tree-wrap">
+                        <a href="#" class="box">
+                            <div class="img">
+                                <img src="images/t3.jpg" alt="" />
+                            </div>
+                            <span class="name">Tree name here</span>
+                        </a>
+                    </div>
+                    <div class="tree-wrap">
+                        <a href="#" class="box">
+                            <div class="img">
+                                <img src="images/t4.jpg" alt="" />
+                            </div>
+                            <span class="name">Tree name here</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/tree.js"></script>
+    </body>
+</html>

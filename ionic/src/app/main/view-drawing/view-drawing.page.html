@@ -1,0 +1,21 @@
+<ion-content padding no-bounce class="text-center">
+  <h2>Your sketch</h2>
+  <div #fixedContainer ion-fixed>
+    <img src="{{webUrl}}/{{path}}" alt="">
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="container px-5 d-flex align-items-center flex-column">
+    <button class="btn btn-primary w-75">
+      Proceed
+    </button>
+    <div class="d-flex justify-content-evenly my-1 w-75">
+      <button class="btn btn-danger me-1 w-50" (click)="drawAgain()">
+        Draw again
+      </button>
+      <button class="btn btn-warning ms-1 w-50" (click)="home()">
+        Home
+      </button>
+    </div>
+  </div>
+</ion-footer>

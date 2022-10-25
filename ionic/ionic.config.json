@@ -1,0 +1,7 @@
+{
+  "name": "DCPaperlessTreeApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

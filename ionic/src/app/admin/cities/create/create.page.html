@@ -1,0 +1,24 @@
+<ion-content>
+  <ion-content>
+    <div class="container">
+      <div class="header d-flex justify-content-between">
+        <h2>Users</h2>
+      </div>
+
+      <form [formGroup]="cityForm">
+        <div class="form-group">
+          <label for="city">City</label>
+          <input
+            type="text"
+            class="form-control"
+            id="city"
+            formControlName="name"
+            placeholder="Enter City"
+          />
+        </div>
+        <button class="btn btn-primary mt-2" (click)="save()">Save</button>
+      </form>
+    </div>
+  </ion-content>
+
+</ion-content>

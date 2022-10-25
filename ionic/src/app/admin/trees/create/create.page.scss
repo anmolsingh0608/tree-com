@@ -1,0 +1,20 @@
+.img-wrap {
+  position: relative;
+}
+img {
+  height: 300px;
+}
+.none {
+  display: none;
+}
+.img-wrap .close {
+  position: absolute;
+  right: 21px;
+  z-index: 100;
+  color: red;
+  font-size: xx-large;
+  cursor: pointer;
+}
+.form-group {
+  margin-top: 10px;
+}

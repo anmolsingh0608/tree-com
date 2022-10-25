@@ -1,0 +1,32 @@
+.landing {
+    background-color: #82C341;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    min-height: 100vh;
+
+    h1 {
+        color: #fff;
+        font: 600 58px/1.2 'Gill Sans', sans-serif;
+        letter-spacing: 0.09em;
+    }
+
+    .cta {
+        background: #CBDB2F;
+        color: #fff;
+        font: 600 24px/1.2 'Gill Sans', sans-serif;
+        height: 64px;
+        width: 280px;
+    }
+}
+
+.trees {
+    padding-left: 400px;
+
+    @media (min-width:1366px) {
+        padding-left: 420px;
+    }
+}
+
+.trees-meta {
+    padding-left: 590px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>DCR Tree - Tree Detail</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="css/app.css" />
+    </head>
+    <body>
+        <main class="trees-meta">
+            <div class="d-flex flex-column nav-bar">
+                <a href="index.html"
+                    ><img src="images/home-icon.svg" alt=""
+                /></a>
+                <a href="selection.html"
+                    ><img src="images/tree-nav-icon.svg" alt=""
+                /></a>
+                <a href="#"><img src="images/edit-nav-icon.svg" alt="" /></a>
+            </div>
+            <div class="d-flex flex-column tree-selected">
+                <div class="heading text-center">
+                    <h2 id="treeName" class="mb-0">River Birch</h2>
+                    <h3 id="scientificName" class="mb-0">Betula negra</h3>
+                    <h4 id="treeUse" class="mb-0 mt-3 text-uppercase">
+                        Preferred Canopy
+                    </h4>
+                </div>
+                <div class="flex-grow-1 tree-view">
+                    <div id="treeImgContainer" class="views-slide owl-carousel">
+                        <div class="item">
+                            <img src="images/tp1.jpg" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="images/tp2.jpg" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="images/tp3.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column tree-detail">
+                <div class="flex-grow-1 meta">
+                    <h2 class="text-uppercase">Form</h2>
+                    <p id="form">Pyramid to Round</p>
+                    <h2 class="text-uppercase">Flower</h2>
+                    <p id="flower">Catkin</p>
+                    <h2 class="text-uppercase">Fruit</h2>
+                    <p id="fruit">Nutlet</p>
+                    <h2 class="text-uppercase">fall Color</h2>
+                    <p id="color">Yellow</p>
+                    <h2 class="text-uppercase">Tolerates</h2>
+                    <p id="tolerates">
+                        Air Pollution, Soil Compaction, Periodic Flooding
+                    </p>
+                    <h2 class="text-uppercase">Growth Rate</h2>
+                    <p id="growthRate">Moderate-Fast</p>
+                    <h2 class="text-uppercase">Size</h2>
+                    <p id="size">Medium</p>
+                    <h2 class="text-uppercase">Native Region</h2>
+                    <p id="region">North America</p>
+                    <h2 class="text-uppercase">Notes</h2>
+                    <p id="notes" class="note">
+                        Single or multi-stemmed forms available; Prune in summer
+                        (if needed); Not drought tolerant; Legendary heat
+                        tolerance
+                    </p>
+                </div>
+                <div class="cta-row mt-0">
+                    <a href="#" class="cta d-block">Order now</a>
+                </div>
+            </div>
+        </main>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="js/app.js"></script>
+        <script src="js/tree.js"></script>
+        <script src="js/tree.detail.js"></script>
+    </body>
+</html>

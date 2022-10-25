@@ -1,0 +1,118 @@
+<ion-content>
+  <div class="container">
+    <div class="header d-flex justify-content-between">
+      <h2>Trees</h2>
+    </div>
+
+    <form [formGroup]="treeForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter name" />
+      </div>
+      <div class="form-group">
+        <label for="scientificName">Scientific Name</label>
+        <input type="text" class="form-control" id="scientificName" formControlName="scientificName"
+          placeholder="Scientific name" />
+      </div>
+      <div class="form-group">
+        <label for="use">Use</label>
+        <input type="text" class="form-control" id="use" formControlName="use" placeholder="Use" />
+      </div>
+      <div *ngFor="let filter of filters" class="form-group">
+        <label>{{filter.name}}</label>
+        <ng-select [items]="filter?.item"
+            formControlName="{{filter.name}}"
+            [addTag]="true"
+            [hideSelected]="true"
+            [multiple]="true">
+        </ng-select>
+      </div>
+      <!-- <div class="form-group">
+        <label for="form">Form</label>
+        <select class="form-select" id="form" formControlName="form">
+          <option value="">None</option>
+          <option *ngFor="let data of form" value="{{data.value}}">{{data.option}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="flowerColor">Flower Color</label>
+        <select class="form-select" id="flowerColor" formControlName="flowerColor">
+          <option value="">None</option>
+          <option *ngFor="let data of flowerColor" value="{{data.value}}">{{data.option}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="flowerTime">Flower Time</label>
+        <select class="form-select" id="flowerTime" formControlName="flowerTime">
+          <option value="">None</option>
+          <option *ngFor="let data of flowerTime" value="{{data.value}}">{{data.option}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fruit">Fruit</label>
+        <select class="form-select" id="fruit" formControlName="fruit">
+          <option value="">None</option>
+          <option *ngFor="let data of fruit" value="{{data.value}}">{{data.option}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fallColor">Fall Color</label>
+        <select class="form-select" id="fallColor" formControlName="fallColor">
+          <option value="">None</option>
+          <option *ngFor="let data of fallColor" value="{{data.value}}">{{data.option}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="tolerates">Tolerances</label>
+        <select class="form-select" id="tolerates" formControlName="tolerates">
+          <option value="">None</option>
+          <option *ngFor="let data of tolerances" value="{{data.value}}">{{data.option}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="size">Size</label>
+        <select class="form-select" id="size" formControlName="size">
+          <option value="">None</option>
+          <option *ngFor="let data of size" value="{{data.value}}">{{data.option}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="growthRate">Growth Rate</label>
+        <select class="form-select" id="growthRate" formControlName="growthRate">
+          <option value="">None</option>
+          <option *ngFor="let data of growthRate" value="{{data.value}}">{{data.option}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="nativeRegion">Native Region</label>
+        <select class="form-select" id="nativeRegion" formControlName="nativeRegion">
+          <option value="">None</option>
+          <option *ngFor="let data of nativeRegion" value="{{data.value}}">{{data.option}}</option>
+        </select>
+      </div> -->
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        <textarea type="text" class="form-control" id="notes" formControlName="notes"
+          placeholder="Enter notes..."></textarea>
+      </div>
+
+      <div class="form-group col-12 border mt-2" *ngFor="let image of imagesArray; let i = index">
+        <button class="btn btn-secondary mt-2" (click)="imageUpload(i)"
+          *ngIf="!image || !image.path || !image.path.length">
+          Upload Image +
+        </button>
+        <div *ngIf="image?.path?.length > 0" class="img-wrap mt-2">
+          <img src="{{webUrl}}/{{image?.path}}" alt="">
+          <span class="close" id="{{image?.id}}" (click)="delete(image.id)">&times;</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary mt-2 mb-2" (click)="image()">
+          Add Image
+        </button>
+      </div>
+      <button class="btn btn-primary mt-2" (click)="saveForm()">Save</button>
+    </form>
+  </div>
+</ion-content>

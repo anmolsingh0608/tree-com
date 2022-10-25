@@ -1,0 +1,117 @@
+<main class="trees-meta">
+  <div class="d-flex flex-column justify-content-between nav-bar">
+    <div>
+      <a routerLink="/main/home"
+        ><img src="assets/images/home-icon.svg" alt=""
+      /></a>
+      <a routerLink="/main/trees"
+        ><img src="assets/images/tree-nav-icon.svg" alt=""
+      /></a>
+      <a (click)="isLoggedIn ? draw() : setOpen(true)"
+        ><img src="assets/images/edit-nav-icon.svg" alt=""
+      /></a>
+    </div>
+    <div>
+      <a *ngIf="isLoggedIn" (click)="logout()" class="mb-0"
+        ><img src="assets/images/logout-48.png" alt=""
+      /></a>
+      <a *ngIf="!isLoggedIn" (click)="setOpen(true)" class="mb-0"
+        ><span class="material-icons"> admin_panel_settings </span></a
+      >
+    </div>
+  </div>
+  <div class="d-flex flex-column tree-selected">
+    <div class="heading text-center">
+      <h2 id="treeName" class="mb-0">River Birch</h2>
+      <h3 id="scientificName" class="mb-0">Betula negra</h3>
+      <h4 id="treeUse" class="mb-0 mt-3 text-uppercase">Preferred Canopy</h4>
+    </div>
+    <div class="flex-grow-1 tree-view">
+      <div class="tree-frame">
+        <div id="treeImgContainer" class="views-slide owl-carousel">
+          <div class="item">
+            <img src="assets/images/tp1.jpg" alt />
+          </div>
+          <div class="item">
+            <img src="assets/images/tp2.jpg" alt />
+          </div>
+          <div class="item">
+            <img src="assets/images/tp3.jpg" alt />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column tree-detail">
+    <div class="flex-grow-1 meta">
+      <h2 class="text-uppercase">Form</h2>
+      <p id="form">Pyramid to Round</p>
+      <h2 class="text-uppercase">Fruit</h2>
+      <p id="fruit">Nutlet</p>
+      <h2 class="text-uppercase">fall Color</h2>
+      <p id="color">Yellow</p>
+      <h2 class="text-uppercase">Tolerates</h2>
+      <p id="tolerates">Air Pollution, Soil Compaction, Periodic Flooding</p>
+      <h2 class="text-uppercase">Growth Rate</h2>
+      <p id="growthRate">Moderate-Fast</p>
+      <h2 class="text-uppercase">Size</h2>
+      <p id="size">Medium</p>
+      <h2 class="text-uppercase">Native Region</h2>
+      <p id="region">North America</p>
+      <h2 class="text-uppercase">Notes</h2>
+      <p id="notes" class="note">
+        Single or multi-stemmed forms available; Prune in summer (if needed);
+        Not drought tolerant; Legendary heat tolerance
+      </p>
+    </div>
+    <div class="cta-row mt-0">
+      <a class="cta d-block" (click)="isLoggedIn ? order() : setOpen(true)">
+        Order now
+      </a>
+      <ion-modal [isOpen]="isModalOpen">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Login</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <form [formGroup]="loginForm">
+              <div class="form-group mt-2">
+                <label for="username">Username</label>
+                <input
+                  formControlName="username"
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Username"
+                  autocapitalize="none"
+                />
+              </div>
+              <div class="form-group mt-2">
+                <label for="password">Password</label>
+                <input
+                  formControlName="password"
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  autocapitalize="none"
+                />
+              </div>
+              <button class="btn btn-primary w-100 mt-2" (click)="login()">
+                Login
+              </button>
+              <button
+                class="btn btn-warning w-100 mt-2"
+                (click)="setOpen(false)"
+              >
+                Cancel
+              </button>
+            </form>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    </div>
+  </div>
+</main>

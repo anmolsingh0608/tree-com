@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" routerLink="/main/trees">
+      <img
+        src="assets/images/form-tree-icon.svg"
+        alt=""
+        width="40"
+        height="40"
+      />
+    </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" [appAccessControl]="{role: role, resourceType: ResourceType.USERS}">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/admin/users"
+            >Users</a
+          >
+        </li>
+        <li class="nav-item" [appAccessControl]="{role: role, resourceType: ResourceType.FILTERS}">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/admin/filters"
+            >Filters</a
+          >
+        </li>
+        <li class="nav-item" [appAccessControl]="{role: role, resourceType: ResourceType.TREES}">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/admin/trees"
+            >Trees</a
+          >
+        </li>
+        <li class="nav-item" [appAccessControl]="{role: role, resourceType: ResourceType.ORDERS}">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/admin/orders"
+            >Orders</a
+          >
+        </li>
+        <li class="nav-item" [appAccessControl]="{role: role, resourceType: ResourceType.CITIES}">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/admin/cities"
+            >Cities</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="d-fluid">
+      <a (click)="logout()">Logout</a>
+    </div>
+  </div>
+</nav>
+<ion-router-outlet></ion-router-outlet>

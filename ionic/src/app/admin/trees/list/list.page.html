@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="container">
+    <div class="header d-flex justify-content-between">
+      <h2>Trees</h2>
+      <button class="btn btn-primary" routerLink="/admin/trees/create">
+        Add Tree
+      </button>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table-striped w-100">
+        <thead>
+          <th>#</th>
+          <th>Name</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tree of trees; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{tree.name}}</td>
+            <td class="p-1">
+              <button class="btn btn-primary" routerLink="/admin/trees/create/{{tree.id}}">
+                <span class="material-icons-outlined">
+                  edit
+                </span>
+              </button>
+              <button class="btn btn-danger ms-1" (click)="deleteTree(tree.id)">
+                <span class="material-icons-outlined">
+                  delete
+                </span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ion-content>

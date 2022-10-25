@@ -1,0 +1,27 @@
+<ion-content>
+  <main class="wrap landing d-flex flex-column" style="background-image: url(assets/images/landingbg.png)">
+    <div class="align-items-center d-flex flex-column flex-grow-1 justify-content-center">
+      <h1 class="mb-5 text-uppercase">Tree finder</h1>
+      <a routerLink="/main/trees"
+        class="align-items-center cta d-inline-flex justify-content-center text-decoration-none text-uppercase">
+        Let’s go
+      </a>
+    </div>
+    <div class="align-items-center d-flex justify-content-evenly p-5">
+      <div class="logo">
+        <img src="assets/images/FINAL-GREENING-LOGO.png" alt>
+      </div>
+      <div class="logo">
+        <img src="assets/images/DCRLogo_horiz-KO.png" alt>
+      </div>
+    </div>
+  </main>
+  <ion-fab class="primary" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/admin/auth">
+      <span class="material-icons">
+        admin_panel_settings
+      </span>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

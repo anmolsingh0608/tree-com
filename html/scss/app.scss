@@ -1,0 +1,13 @@
+@import 'fonts';
+@import 'navbar';
+@import 'view';
+@import 'tree';
+@import 'treemeta';
+
+.grid-landing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}

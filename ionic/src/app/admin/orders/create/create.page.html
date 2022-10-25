@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="container">
+    <div class="header d-flex justify-content-between">
+      <h2>Order</h2>
+    </div>
+
+    <form>
+      <div class="form-group mt-4">
+        <label for="">Customer Name</label>
+        <input type="text" class="form-control" id="" value="{{order?.customer.name}}" readonly />
+      </div>
+      <div class="form-group mt-4">
+        <label for="">Tree Name</label>
+        <input type="text" class="form-control" id="" readonly
+          value="{{order?.tree.name}} ({{order?.tree.scientificName}})" />
+      </div>
+      <div class="form-group mt-4">
+        <label for="">Quantity</label>
+        <input type="text" class="form-control" id="" readonly value="{{order?.quantity}}" />
+      </div>
+      <div class="form-group mt-4">
+        <label for="">Address</label>
+        <input type="text" class="form-control" id="" readonly value="{{order?.customer.address}}" />
+      </div>
+      <div class="form-group mt-4">
+        <label for="">City</label>
+        <input type="text" class="form-control" id="" readonly value="{{order?.customer.city}}" />
+      </div>
+      <div class="form-group mt-4">
+        <label for="">Sketch</label>
+        <p *ngIf="!order?.yard_sketch_image || !order?.yard_sketch_image?.path || order?.yard_sketch_image.path.length < 1">No Sketch Available</p>
+        <img *ngIf="order?.yard_sketch_image?.path.length > 0" class="d-block" style="border: 1px solid black;" [src]="webUrl + '/' + order?.yard_sketch_image?.path" [alt]="'Sketch for order ID:'" />
+      </div>
+    </form>
+  </div>
+</ion-content>

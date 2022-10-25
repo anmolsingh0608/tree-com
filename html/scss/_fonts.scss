@@ -1,0 +1,91 @@
+$path: '../fonts/';
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans-Light.woff2') format('woff2'),
+    url('#{$path}GillSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans-LightItalic.woff2') format('woff2'),
+    url('#{$path}GillSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans.woff2') format('woff2'),
+    url('#{$path}GillSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans-Italic.woff2') format('woff2'),
+    url('#{$path}GillSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans-Medium.woff2') format('woff2'),
+    url('#{$path}GillSans-Medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans-MediumItalic.woff2') format('woff2'),
+    url('#{$path}GillSans-MediumItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans-Bold.woff2') format('woff2'),
+    url('#{$path}GillSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans-BoldItalic.woff2') format('woff2'),
+    url('#{$path}GillSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans-Heavy.woff2') format('woff2'),
+    url('#{$path}GillSans-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('#{$path}GillSans-HeavyItalic.woff2') format('woff2'),
+    url('#{$path}GillSans-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}

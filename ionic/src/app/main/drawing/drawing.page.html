@@ -1,0 +1,27 @@
+<ion-content padding no-bounce>
+  <h2>Draw your sketch</h2>
+  <div *ngIf="!path" #fixedContainer ion-fixed>
+    <ion-row>
+      <ion-col *ngFor="let color of colors" [style.background]="color" class="color-block"
+        [ngClass]="{'selected': color===selectedColor}" tappable (click)="selectColor(color)"></ion-col>
+    </ion-row>
+    <canvas #imageCanvas (touchstart)="startDrawing($event)" (touchmove)="moved($event)"
+      (touchend)="touchLeft($event)"></canvas>
+  </div>
+  <div *ngIf="!!path" #fixedContainer ion-fixed>
+    <img src="{{webUrl}}/{{path}}" alt="">
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="container px-5 d-flex align-items-center flex-column">
+    <button class="btn btn-primary w-75" (click)="proceed()">
+      Proceed
+    </button>
+    <div class="d-flex justify-content-evenly my-1 w-75">
+      <button class="btn btn-warning me-1 w-50" (click)="undoLastStroke()" [disabled]="!!path">Undo</button>
+      <button class="btn btn-danger ms-1 w-50" (click)="(!!path) ? drawAgain() : resetDrawing()">
+        Clear sketch
+      </button>
+    </div>
+  </div>
+</ion-footer>
